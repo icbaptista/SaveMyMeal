@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SaveMyMeal</string>
+    <string name="dispensa_text">DISPENSA</string>
+    <string name="text_carne">CARNE</string>
+    <string name="text_peixe">PEIXE</string>
+    <string name="text_vegetables">VEGETABLES AND FRUIT</string>
+    <string name="text_outros">OUTROS</string>
 </resources>
