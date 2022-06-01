@@ -4,10 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+
+import java.net.URISyntaxException;
 
 public class DispensaActivity extends AppCompatActivity {
 
@@ -25,6 +30,15 @@ public class DispensaActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowHomeEnabled(true);
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
+
+        /*LinearLayout googleforms = findViewById(R.id.FishImageLayout);
+        googleforms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/uzVAJMM7w8QDnXqU9"));
+                startActivity(browserIntent);
+            }
+        });*/
     }
 
     @Override
@@ -40,5 +54,19 @@ public class DispensaActivity extends AppCompatActivity {
     public void lauchVegetablesActivity(View view) {
         Intent intent = new Intent(this, VegetablesActivity.class);
         startActivity(intent);
+    }
+    public void showLista(View view) {
+        Intent seeList = new Intent(DispensaActivity.this, ListaDeCompras.class);
+        startActivity(seeList);
+    }
+
+    public void showHome(View view) {
+        Intent seeList = new Intent(DispensaActivity.this, HomePage.class);
+        startActivity(seeList);
+    }
+
+    public void showRecipes(View view){
+        Intent seeList = new Intent(DispensaActivity.this, receipt_selection.class);
+        startActivity(seeList);
     }
 }

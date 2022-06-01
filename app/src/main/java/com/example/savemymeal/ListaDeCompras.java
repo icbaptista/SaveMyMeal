@@ -29,6 +29,7 @@ import java.io.FilterOutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ListaDeCompras extends AppCompatActivity {
 
@@ -53,11 +54,11 @@ public class ListaDeCompras extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
 
         // Button to add new ingredients to the list
         input = findViewById(R.id.input_item);
-        input_nr = findViewById(R.id.input_quantity);
         add = findViewById(R.id.btn_add_ingredient);
 
         // Putting initial items in the shopping list
@@ -157,5 +158,20 @@ public class ListaDeCompras extends AppCompatActivity {
             e.printStackTrace();
         }
         super.onPause();
+    }
+
+    public void showFridge(View view) {
+        Intent seeList = new Intent(ListaDeCompras.this, DispensaActivity.class);
+        startActivity(seeList);
+    }
+
+    public void showHome(View view) {
+        Intent seeList = new Intent(ListaDeCompras.this, HomePage.class);
+        startActivity(seeList);
+    }
+
+    public void showRecipes(View view){
+        Intent seeList = new Intent(ListaDeCompras.this, receipt_selection.class);
+        startActivity(seeList);
     }
 }

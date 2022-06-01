@@ -22,11 +22,20 @@ public class HomePage extends AppCompatActivity {
         btnRecipes = findViewById(R.id.btnReceitas);
         btnFridge = findViewById(R.id.btnDispena);
         btnList = findViewById(R.id.btnLista);
-
     }
 
     public void showLista(View view) {
         Intent seeList = new Intent(HomePage.this, ListaDeCompras.class);
+        startActivity(seeList);
+    }
+
+    public void showFridge(View view) {
+        Intent seeList = new Intent(HomePage.this, DispensaActivity.class);
+        startActivity(seeList);
+    }
+
+    public void showRecipes(View view){
+        Intent seeList = new Intent(HomePage.this, receipt_selection.class);
         startActivity(seeList);
     }
 }

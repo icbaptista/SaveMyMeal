@@ -11,7 +11,7 @@
 9-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:5:5-30:19
+11-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:5:5-47:19
 12        android:allowBackup="true"
 12-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -69,6 +69,40 @@
 41                android:resource="@array/preloaded_fonts" />
 41-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:28:17-58
 42        </activity>
-43    </application>
-44
-45</manifest>
+43        <activity
+43-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:30:9-32:40
+44            android:name="com.example.savemymeal.VegetablesActivity"
+44-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:31:13-47
+45            android:exported="false" />
+45-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:32:13-37
+46        <activity
+46-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:33:9-40:20
+47            android:name="com.example.savemymeal.DispensaActivity"
+47-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:34:13-45
+48            android:label="@string/text_dispensa_label"
+48-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:35:13-56
+49            android:parentActivityName="com.example.savemymeal.HomePage" >
+49-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:36:13-51
+50            <meta-data
+50-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:19:13-21:60
+51                android:name="android.support.PARENT_ACTIVITY"
+51-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:19:24-70
+52                android:value=".HomePage" />
+52-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:20:17-42
+53        </activity>
+54        <activity
+54-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:41:9-43:60
+55            android:name="com.example.savemymeal.PopUp"
+55-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:42:13-34
+56            android:theme="@style/Theme.AppCompat.PopUp" />
+56-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:43:13-57
+57
+58        <meta-data
+58-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:26:13-28:61
+59            android:name="preloaded_fonts"
+59-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:27:17-47
+60            android:resource="@array/preloaded_fonts" />
+60-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:28:17-58
+61    </application>
+62
+63</manifest>

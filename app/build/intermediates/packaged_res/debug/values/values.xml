@@ -27,10 +27,17 @@
     <string name="LISTA_DE_COMPRAS">LISTA DE COMPRAS</string>
     <string name="app_name">SaveMyMeal</string>
     <string name="dispensa_text">DISPENSA</string>
+    <string name="text_bemvindo">Bem vindo de volta,</string>
     <string name="text_carne">CARNE</string>
+    <string name="text_dispensa_label">Dispensa Activity</string>
+    <string name="text_disponiveis">Estes são os ingredientes que tem disponiveis</string>
     <string name="text_outros">OUTROS</string>
     <string name="text_peixe">PEIXE</string>
-    <string name="text_vegetables">Vegetais e Fruta</string>
+    <string name="text_vegetables">VEGETAIS E FRUTA</string>
+    <style name="Theme.AppCompat.PopUp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
     <style name="Theme.SaveMyMeal" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/white</item>

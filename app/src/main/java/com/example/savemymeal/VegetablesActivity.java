@@ -173,4 +173,18 @@ public class VegetablesActivity extends AppCompatActivity implements View.OnClic
         editor.putString("couve",couve.getText().toString());
         editor.apply();
     }
+    public void showLista(View view) {
+        Intent seeList = new Intent(VegetablesActivity.this, ListaDeCompras.class);
+        startActivity(seeList);
+    }
+
+    public void showHome(View view) {
+        Intent seeList = new Intent(VegetablesActivity.this, DispensaActivity.class);
+        startActivity(seeList);
+    }
+
+    public void showRecipes(View view){
+        Intent seeList = new Intent(VegetablesActivity.this, receipt_selection.class);
+        startActivity(seeList);
+    }
 }
