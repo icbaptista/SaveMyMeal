@@ -11,7 +11,7 @@
 9-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:5:5-47:19
+11-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:5:5-66:19
 12        android:allowBackup="true"
 12-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -96,13 +96,50 @@
 55-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:42:13-34
 56            android:theme="@style/Theme.AppCompat.PopUp" />
 56-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:43:13-57
-57
-58        <meta-data
-58-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:26:13-28:61
-59            android:name="preloaded_fonts"
-59-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:27:17-47
-60            android:resource="@array/preloaded_fonts" />
-60-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:28:17-58
-61    </application>
-62
-63</manifest>
+57        <activity android:name="com.example.savemymeal.receipt_selection" >
+57-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:44:9-48:20
+57-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:44:19-52
+58            <meta-data
+58-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:19:13-21:60
+59                android:name="android.support.PARENT_ACTIVITY"
+59-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:19:24-70
+60                android:value=".HomePage" />
+60-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:20:17-42
+61        </activity>
+62        <activity android:name="com.example.savemymeal.Pop_receita_ovo" >
+62-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:49:9-53:20
+62-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:49:19-50
+63            <meta-data
+63-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:19:13-21:60
+64                android:name="android.support.PARENT_ACTIVITY"
+64-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:19:24-70
+65                android:value=".receipt_selection" />
+65-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:20:17-42
+66        </activity>
+67        <activity android:name="com.example.savemymeal.Pop_receita_salada_fruta" >
+67-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:54:9-58:20
+67-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:54:19-59
+68            <meta-data
+68-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:19:13-21:60
+69                android:name="android.support.PARENT_ACTIVITY"
+69-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:19:24-70
+70                android:value=".receipt_selection" />
+70-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:20:17-42
+71        </activity>
+72        <activity
+72-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:59:9-62:20
+73            android:name="com.example.savemymeal.SelectIngredient"
+73-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:59:19-51
+74            android:theme="@style/Theme.AppCompat.PopUp" >
+74-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:60:13-57
+75        </activity>
+76
+77        <meta-data
+77-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:26:13-28:61
+78            android:name="preloaded_fonts"
+78-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:27:17-47
+79            android:resource="@array/preloaded_fonts" />
+79-->C:\Users\ASUS\Desktop\Test\SaveMyMeal\app\src\main\AndroidManifest.xml:28:17-58
+80    </application>
+81
+82</manifest>

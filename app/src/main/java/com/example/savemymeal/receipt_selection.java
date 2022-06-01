@@ -9,7 +9,13 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
-public class receipt_selection extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+
+import androidx.appcompat.widget.Toolbar;
+
+public class receipt_selection extends AppCompatActivity {
     private Button buttonVegetariano;
     private Button buttonIngredientes;
     private Button buttonDispensa;
@@ -33,6 +39,18 @@ public class receipt_selection extends Activity {
         super.onCreate(savedInstanceState);
         // setContentView(R.layout.activity_main);
         setContentView(R.layout.receipts);
+
+        // Modifying toolbar
+        Toolbar toolbar = findViewById(R.id.mytoolbar);
+        setSupportActionBar(toolbar);
+
+        // add back arrow to toolbar
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
+
         //Criação dos botões
         buttonVegetariano = (Button) findViewById(R.id.bvegetariano);
         buttonDispensa = (Button) findViewById(R.id.buttonDispensa);
@@ -176,5 +194,19 @@ public class receipt_selection extends Activity {
             LL_ovo_frito.setVisibility(View.GONE);
             LL_paella_vegetariana.setVisibility(View.GONE);
         }
+    }
+    public void showFridge(View view) {
+        Intent seeList = new Intent(receipt_selection.this, DispensaActivity.class);
+        startActivity(seeList);
+    }
+
+    public void showHome(View view) {
+        Intent seeList = new Intent(receipt_selection.this, HomePage.class);
+        startActivity(seeList);
+    }
+
+    public void showLista(View view){
+        Intent seeList = new Intent(receipt_selection.this, ListaDeCompras.class);
+        startActivity(seeList);
     }
 }

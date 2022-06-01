@@ -1698,10 +1698,13 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable buttons_border
+drawable buttons_border_selected
 drawable chef
 drawable chef_cheio
 drawable couve
 drawable customborder
+drawable customborder_receipt_listing
 drawable custombordernoacr
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1762,8 +1765,11 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable orange
 drawable others
+drawable ovo_frito
+drawable paella_vegatariana
 drawable remove
 drawable rounded_layout_drawable
+drawable salada_fruta
 drawable shopping_cart
 drawable shopping_cart_cheio
 drawable test_custom_background
@@ -1794,6 +1800,7 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
+id Salada_fruta
 id TOP_END
 id TOP_START
 id Text_PopUp
@@ -1877,7 +1884,11 @@ id btnDispena
 id btnLista
 id btnReceitas
 id btn_add_ingredient
+id button5
+id buttonAceitar
+id buttonDispensa
 id buttonPanel
+id bvegetariano
 id cache_measures
 id cancel_button
 id center
@@ -1885,6 +1896,15 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id checkBoxAlface
+id checkBoxAzeite
+id checkBoxBacalhau
+id checkBoxBanana
+id checkBoxCouve
+id checkBoxFrango
+id checkBoxLaranja
+id checkBoxMaca
+id checkBoxTomate
 id checkbox
 id checked
 id chip
@@ -1974,6 +1994,7 @@ id hideable
 id home
 id homeAsUp
 id honorRequest
+id horizontalScrollView
 id icon
 id icon_group
 id ifRoom
@@ -1998,6 +2019,7 @@ id leftToRight
 id line1
 id line3
 id linear
+id linearLayout2
 id linearLayout_Alface
 id linearLayout_Banana
 id linearLayout_Couve
@@ -2062,6 +2084,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id mynavbar
 id mytoolbar
 id name
 id navbar
@@ -2082,7 +2105,10 @@ id off
 id on
 id outline
 id outward
+id ovo_frito
+id ovo_frito_video_view
 id packed
+id paella_vegetariana
 id parallax
 id parent
 id parentPanel
@@ -2113,6 +2139,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id salada_fruta_video_view
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2123,6 +2150,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollView2
+id scrollView_ovo_frito
 id scrollable
 id search_badge
 id search_bar
@@ -2135,6 +2163,7 @@ id search_plate
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
+id select_ingredientes
 id selected
 id selection_type
 id shopping_list
@@ -2196,6 +2225,8 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView2
+id textView4
 id text_alface_count
 id text_alface_name
 id text_banana_count
@@ -2388,7 +2419,11 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout pop_up_ovo_frito
+layout pop_up_salada_fruta
 layout popwindow_vegetables
+layout receipt_ingredient_selection
+layout receipts
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -2413,6 +2448,8 @@ layout vegetables_main
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw ovo_frito_video
+raw salada_fruta_video
 string LISTA_DE_COMPRAS
 string abc_action_bar_home_description
 string abc_action_bar_up_description

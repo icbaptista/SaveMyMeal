@@ -54,6 +54,25 @@
         <activity
             android:name="com.example.savemymeal.PopUp"
             android:theme="@style/Theme.AppCompat.PopUp" />
+        <activity android:name="com.example.savemymeal.receipt_selection" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomePage" />
+        </activity>
+        <activity android:name="com.example.savemymeal.Pop_receita_ovo" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".receipt_selection" />
+        </activity>
+        <activity android:name="com.example.savemymeal.Pop_receita_salada_fruta" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".receipt_selection" />
+        </activity>
+        <activity
+            android:name="com.example.savemymeal.SelectIngredient"
+            android:theme="@style/Theme.AppCompat.PopUp" >
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
