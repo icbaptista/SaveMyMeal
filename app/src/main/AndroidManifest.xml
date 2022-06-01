@@ -27,5 +27,22 @@
                 android:name="preloaded_fonts"
                 android:resource="@array/preloaded_fonts" />
         </activity>
+        <activity
+            android:name=".VegetablesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DispensaActivity"
+            android:label="@string/text_dispensa_label"
+            android:parentActivityName=".HomePage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomePage" />
+        </activity>
+        <activity
+            android:name=".PopUp"
+            android:theme="@style/Theme.AppCompat.PopUp" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 </manifest>
