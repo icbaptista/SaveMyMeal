@@ -41,6 +41,13 @@
         <activity
             android:name=".PopUp"
             android:theme="@style/Theme.AppCompat.PopUp" />
+        <activity android:name=".receipt_selection"></activity>
+        <activity android:name=".Pop_receita_ovo"></activity>
+        <activity android:name=".Pop_receita_salada_fruta"></activity>
+        <activity android:name=".SelectIngredient"
+            android:theme="@style/Theme.AppCompat.PopUp"
+            >
+        </activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
