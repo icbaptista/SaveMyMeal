@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    tools:context=".VegetablesActivity">
+
+    <include
+        android:id="@+id/mytoolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_vegetables_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/text_vegetables"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mytoolbar" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_vegetables_activity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_vegetables_activity"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_Laranja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/customborder"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_vegetables_activity">
+
+                <ImageView
+                    android:id="@+id/LaranjaImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Laranja"
+                    android:maxWidth="75dp"
+                    android:maxHeight="75dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/orange" />
+
+                <TextView
+                    android:id="@+id/text_laranja_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/lato"
+                    android:gravity="center"
+                    android:text="Laranja"
+                    android:textSize="25sp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/text_laranja_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/lato"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="0 Itens"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_Tomate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/customborder"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout_Laranja">
+
+                <ImageView
+                    android:id="@+id/TomateImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Laranja"
+                    android:maxWidth="75dp"
+                    android:maxHeight="75dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/tomato" />
+
+                <TextView
+                    android:id="@+id/text_tomate_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/lato"
+                    android:gravity="center"
+                    android:text="Tomate"
+                    android:textSize="25sp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/text_tomate_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/lato"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="0 Itens"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_Maca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/customborder"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout_Laranja">
+
+                <ImageView
+                    android:id="@+id/MacaImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Maça"
+                    android:maxWidth="75dp"
+                    android:maxHeight="75dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/appel" />
+
+                <TextView
+                    android:id="@+id/text_maca_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato"
+                    android:layout_gravity="center"
+                    android:text="Maça"
+                    android:layout_marginLeft="60dp"
+                    android:textSize="25sp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/text_maca_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato"
+                    android:layout_gravity="center"
+                    android:text="0 Itens"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_Alface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/customborder"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout_Laranja">
+
+                <ImageView
+                    android:id="@+id/AlfaceImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Maça"
+                    android:maxWidth="75dp"
+                    android:maxHeight="75dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/alface" />
+
+                <TextView
+                    android:id="@+id/text_alface_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato"
+                    android:layout_gravity="center"
+                    android:text="Alface"
+                    android:layout_marginLeft="58dp"
+                    android:textSize="25sp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/text_alface_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato"
+                    android:layout_gravity="center"
+                    android:text="0 Itens"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_Banana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/customborder"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout_Laranja">
+
+                <ImageView
+                    android:id="@+id/BananaImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Banana"
+                    android:maxWidth="75dp"
+                    android:maxHeight="75dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/banana" />
+
+                <TextView
+                    android:id="@+id/text_banana_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato"
+                    android:layout_gravity="center"
+                    android:text="Banana"
+                    android:layout_marginLeft="50dp"
+                    android:textSize="25sp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/text_banana_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato"
+                    android:layout_gravity="center"
+                    android:text="0 Itens"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_Couve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="230dp"
+                android:background="@drawable/customborder"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout_Laranja">
+
+                <ImageView
+                    android:id="@+id/CouveImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Couve"
+                    android:maxWidth="75dp"
+                    android:maxHeight="75dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/couve" />
+
+                <TextView
+                    android:id="@+id/text_couve_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato"
+                    android:layout_gravity="center"
+                    android:text="Couve"
+                    android:layout_marginLeft="58dp"
+                    android:textSize="25sp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/text_couve_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato"
+                    android:layout_gravity="center"
+                    android:text="0 Itens"
+                    android:textSize="20sp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
