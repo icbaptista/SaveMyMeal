@@ -179,7 +179,7 @@ public class VegetablesActivity extends AppCompatActivity implements View.OnClic
     }
 
     public void showHome(View view) {
-        Intent seeList = new Intent(VegetablesActivity.this, DispensaActivity.class);
+        Intent seeList = new Intent(VegetablesActivity.this, HomePage.class);
         startActivity(seeList);
     }
 
