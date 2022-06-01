@@ -50,6 +50,7 @@
         android:text="Lista de Compras"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:onClick="showLista"
         app:layout_constraintTop_toBottomOf="@+id/btnDispena" />
 
     <TextView

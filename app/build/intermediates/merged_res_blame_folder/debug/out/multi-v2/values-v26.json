@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\diogo\\AndroidStudioProjects\\SaveMyMeal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
+            "outputFile": "C:\\Users\\ASUS\\Desktop\\Test\\SaveMyMeal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\diogo\\.gradle\\caches\\transforms-3\\b7cdc5c1453a7e1579f6238be628b37b\\transformed\\appcompat-1.3.0\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\ASUS\\.gradle\\caches\\transforms-3\\b7cdc5c1453a7e1579f6238be628b37b\\transformed\\appcompat-1.3.0\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

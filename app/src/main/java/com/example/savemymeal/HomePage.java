@@ -23,14 +23,10 @@ public class HomePage extends AppCompatActivity {
         btnFridge = findViewById(R.id.btnDispena);
         btnList = findViewById(R.id.btnLista);
 
-        btnList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent seeList = new Intent(HomePage.this, ListaDeCompras.class);
-                startActivity(seeList);
-            }
-        });
-
     }
 
+    public void showLista(View view) {
+        Intent seeList = new Intent(HomePage.this, ListaDeCompras.class);
+        startActivity(seeList);
+    }
 }

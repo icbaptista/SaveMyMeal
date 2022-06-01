@@ -19,13 +19,26 @@
         android:testOnly="true"
         android:theme="@style/Theme.SaveMyMeal" >
         <activity
-            android:name="com.example.savemymeal.DispensaActivity"
+            android:name="com.example.savemymeal.HomePage"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:resource="@array/preloaded_fonts"
+                android:value=".HomePage" />
+        </activity>
+        <activity
+            android:name="com.example.savemymeal.ListaDeCompras"
+            android:label="Lista de Compras"
+            android:parentActivityName="com.example.savemymeal.HomePage" >
+            <meta-data
+                android:name="preloaded_fonts"
+                android:resource="@array/preloaded_fonts" />
         </activity>
     </application>
 
