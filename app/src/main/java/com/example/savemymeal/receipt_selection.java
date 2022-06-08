@@ -96,7 +96,7 @@ public class receipt_selection extends AppCompatActivity {
         llSaladaFruta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(receipt_selection.this, Pop_receita_salada_fruta.class));
+                startActivity(new Intent(receipt_selection.this, Receita_Salada_Fruta.class));
             }
         });
 
@@ -105,7 +105,7 @@ public class receipt_selection extends AppCompatActivity {
         llbacalhauNatas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(receipt_selection.this, Pop_receita_bacalhau_natas.class));
+                startActivity(new Intent(receipt_selection.this, Receita_Bacalhau_Natas.class));
             }
         });
 
