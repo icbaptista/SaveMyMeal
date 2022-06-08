@@ -4,25 +4,46 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.SearchView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
+import androidx.gridlayout.widget.GridLayout;
+
+import java.util.Locale;
 
 public class receipt_selection extends AppCompatActivity {
-    private Button buttonVegetariano;
-    private Button buttonIngredientes;
-    private Button buttonDispensa;
-    private LinearLayout LL_salada_fruta;
-    private LinearLayout LL_ovo_frito;
-    private LinearLayout LL_paella_vegetariana;
-    private boolean dispensa = false;
+    private SearchView svpesquisa;
+
+
+
+    private LinearLayout llbacalhauNatas;
+    private CardView cvbacalhauNatas;
+
+    private CardView cvcaldoVerde;
+
+    private CardView cvchocoFrito;
+
+    private CardView cvcozidoPortuguesa;
+
+    private LinearLayout llSaladaFruta;
+    private CardView cvSaladaFruta;
+
+    private CardView cvsopaLegumes;
+
+
+
+    private LinearLayout buttonIngredientes;
+    private GridLayout grid;
     private boolean vegetariano = false;
     private boolean laranja = true;
     private boolean Alface = true;
@@ -40,6 +61,14 @@ public class receipt_selection extends AppCompatActivity {
         // setContentView(R.layout.activity_main);
         setContentView(R.layout.receipts);
 
+        grid = (GridLayout) findViewById(R.id.grid);
+        cvcaldoVerde = (CardView) findViewById(R.id.cardView_caldo_verde);
+        cvsopaLegumes = (CardView) findViewById(R.id.cardView_sopa_legumes);
+        cvSaladaFruta = (CardView) findViewById(R.id.cardView_salada_fruta);
+        cvbacalhauNatas = (CardView) findViewById(R.id.cardView_bacalhau_natas);
+        cvcozidoPortuguesa = (CardView) findViewById(R.id.cardView_cozido_portuguesa);
+        cvchocoFrito = (CardView) findViewById(R.id.cardView_choco_frito);
+
         // Modifying toolbar
         Toolbar toolbar = findViewById(R.id.mytoolbar);
         setSupportActionBar(toolbar);
@@ -51,33 +80,8 @@ public class receipt_selection extends AppCompatActivity {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
 
-        //Criação dos botões
-        buttonVegetariano = (Button) findViewById(R.id.bvegetariano);
-        buttonDispensa = (Button) findViewById(R.id.buttonDispensa);
-        LL_ovo_frito = (LinearLayout) findViewById(R.id.ovo_frito);
-        LL_salada_fruta = (LinearLayout) findViewById(R.id.Salada_fruta);
-        LL_paella_vegetariana = (LinearLayout) findViewById(R.id.paella_vegetariana);
-        buttonIngredientes = (Button) findViewById(R.id.select_ingredientes);
-
-        //Esconder as receitas não vegetarianas
-        buttonVegetariano.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                //Se já tiverem carregado alguma vez no botão de vegetariano
-                if (vegetariano) {
-                    vegetariano = false;
-                    buttonVegetariano.setTextColor(Color.parseColor("#0EA33C"));
-                    buttonVegetariano.setBackgroundResource(R.drawable.buttons_border);
-                }
-                else {
-                    vegetariano = true;
-                    buttonVegetariano.setTextColor(Color.parseColor("#f1f1f1"));
-                    buttonVegetariano.setBackgroundResource(R.drawable.buttons_border_selected);
-                }
-                updateReceitas();
-            }
-        });
-
+        //Abrir os filtros
+        buttonIngredientes = (LinearLayout) findViewById(R.id.select_ingredientes);
         buttonIngredientes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,54 +90,140 @@ public class receipt_selection extends AppCompatActivity {
             }
         });
 
-        //Mostrar todas as informações acerca do ovo frito, ao clicar nele
-        LL_ovo_frito.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Isto funciona como um botão para o Ovo Frito, o que vou fazer agora é isto abrir um popUp com toda a receita
-                startActivity(new Intent(receipt_selection.this, Pop_receita_ovo.class));
-            }
-        });
 
-        //Mostrar todas as informações acerca da salada de fruta, ao clicar nele
-        LL_salada_fruta.setOnClickListener(new View.OnClickListener() {
+        //Criação do botão e Mostrar todas as infos acerca da Salada de Fruta ao clicar
+        llSaladaFruta = (LinearLayout) findViewById(R.id.linearLayout_salada_fruta);
+        llSaladaFruta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Isto funciona como um botão para o Ovo Frito, o que vou fazer agora é isto abrir um popUp com toda a receita
                 startActivity(new Intent(receipt_selection.this, Pop_receita_salada_fruta.class));
             }
         });
+
+
+        llbacalhauNatas = (LinearLayout) findViewById(R.id.linearLayout_bacalhau_natas);
+        llbacalhauNatas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //startActivity(new Intent(receipt_selection.this, Pop_receita_bacalhau_natas.class));
+            }
+        });
+
+        svpesquisa = (SearchView) findViewById(R.id.pesquisa);
+        svpesquisa.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                if(s.compareToIgnoreCase("Salada de Fruta") == 0){
+                    //Tudo vai desaparecer, vou só colocar a desaparecer a salada de fruta para testar
+                    grid.removeView(cvcaldoVerde);
+                    grid.removeView(cvchocoFrito);
+                    grid.removeView(cvcozidoPortuguesa);
+                    grid.removeView(cvsopaLegumes);
+                    grid.removeView(cvbacalhauNatas);
+                }
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                s = s.toLowerCase();
+                if(s.compareTo("") == 0){
+                    updateReceitas();
+                }
+                return false;
+            }
+        });
+
+
     }
 
     public void updateReceitas(){
         //Colocar todas as receitas ativas
-        LL_ovo_frito.setVisibility(View.VISIBLE);
-        LL_salada_fruta.setVisibility(View.VISIBLE);
-        //Verificar se o Ovo Frito continua ativo
+        grid.removeView(cvbacalhauNatas);
+        grid.removeView(cvcaldoVerde);
+        grid.removeView(cvchocoFrito);
+        grid.removeView(cvcozidoPortuguesa);
+        grid.removeView(cvSaladaFruta);
+        grid.removeView(cvsopaLegumes);
+        grid.addView(cvbacalhauNatas);
+        grid.addView(cvcaldoVerde);
+        grid.addView(cvchocoFrito);
+        grid.addView(cvcozidoPortuguesa);
+        grid.addView(cvSaladaFruta);
+        grid.addView(cvsopaLegumes);
+
+
+        //Verificar se a Salada de fruta continua ativa
         for(int i = 0; i < 1; i++){
-            if(vegetariano) {
-                LL_ovo_frito.setVisibility(View.GONE);
+            if(Banana == false || laranja == false || Maca == false){
+                grid.removeView(cvSaladaFruta);
                 break;
             }
-            //Supostamente if ovos == false tb colocavamos a visibilidade
         }
 
-        //Verificar se a Salada de fruta continua ativo
+        //Verificar se o bacalhau com natas continua ativo
         for(int i = 0; i < 1; i++){
-            //Supostamente if maca == false or banana or laranja tb colocavamos a visibilidade
-            if(Maca == false || Banana == false || laranja == false) {
-                LL_salada_fruta.setVisibility(View.GONE);
+            if(vegetariano){
+                grid.removeView(cvbacalhauNatas);
                 break;
             }
-            if(vegetariano == false) {
-                LL_ovo_frito.setVisibility(View.GONE);
-                LL_paella_vegetariana.setVisibility(View.GONE);
+            if(Bacalhau == false){
+                grid.removeView(cvbacalhauNatas);
+                break;
             }
         }
+
+        //Verificar se o caldo verde continua ativo
+        for(int i = 0; i < 1; i++){
+            if(vegetariano){
+                grid.removeView(cvcaldoVerde);
+                break;
+            }
+            if(Couve == false || Azeite == false){
+                grid.removeView(cvcaldoVerde);
+                break;
+            }
+        }
+
+        //Verificar se o choco frito continua ativo
+        for(int i = 0; i < 1; i++){
+            if(vegetariano){
+                grid.removeView(cvchocoFrito);
+                break;
+            }
+            if(Alface == false || Banana == false || Couve == false || laranja == false || Maca == false || Tomate == false || Frango == false || Azeite == false || Bacalhau == false){
+                grid.removeView(cvchocoFrito);
+                break;
+            }
+        }
+
+        //Verificar se o cozido a portuguesa continua ativo
+        for(int i = 0; i < 1; i++){
+            if(vegetariano){
+                grid.removeView(cvcozidoPortuguesa);
+                break;
+            }
+            if(Alface == false || Banana == false || Couve == false || laranja == false || Maca == false || Tomate == false || Frango == false || Azeite == false || Bacalhau == false){
+                grid.removeView(cvcozidoPortuguesa);
+                break;
+            }
+        }
+
+        //Verificar se a sopa legumes continua ativo
+        for(int i = 0; i < 1; i++){
+            if(Couve == false || Tomate == false || Azeite == false){
+                grid.removeView(cvsopaLegumes);
+                break;
+            }
+        }
+
     }
+
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
         laranja = false;
         Alface = false;
         Azeite = false;
@@ -143,6 +233,7 @@ public class receipt_selection extends AppCompatActivity {
         Frango = false;
         Maca = false;
         Tomate = false;
+        vegetariano = false;
         super.onActivityResult(requestCode, resultCode, data);
         String alimento = data.getStringExtra(SelectIngredient.EXTRA_COUNT);
         String[] alimentosArray = alimento.split(" ");
@@ -174,26 +265,45 @@ public class receipt_selection extends AppCompatActivity {
             if(i.compareTo("tomate") == 0){
                 Tomate = true;
             }
+
+
+            if(i.compareTo("vegetariano") == 0){
+                vegetariano = true;
+            }
+
+            if(i.compareTo("dispensa") == 0){
+                laranja = true;
+                Banana = true;
+                Maca = true;
+            }
+        }
+
+        if(alimento.compareTo(" vegetariano") == 0){
+            laranja = true;
+            Alface = true;
+            Azeite = true;
+            Bacalhau = true;
+            Banana = true;
+            Couve = true;
+            Frango = true;
+            Maca = true;
+            Tomate = true;
         }
         updateReceitas();
     }
 
 
     public void checkDispensa(View view) {
-        if (dispensa) {
+        /*if (dispensa) {
             dispensa = false;
-            buttonDispensa.setTextColor(Color.parseColor("#0EA33C"));
-            buttonDispensa.setBackgroundResource(R.drawable.buttons_border);
             LL_ovo_frito.setVisibility(View.VISIBLE);
             LL_paella_vegetariana.setVisibility(View.VISIBLE);
         }
         else {
             dispensa = true;
-            buttonDispensa.setTextColor(Color.parseColor("#f1f1f1"));
-            buttonDispensa.setBackgroundResource(R.drawable.buttons_border_selected);
             LL_ovo_frito.setVisibility(View.GONE);
             LL_paella_vegetariana.setVisibility(View.GONE);
-        }
+        }*/
     }
     public void showFridge(View view) {
         Intent seeList = new Intent(receipt_selection.this, DispensaActivity.class);
