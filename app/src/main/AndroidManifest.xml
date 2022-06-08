@@ -60,6 +60,16 @@
             android:theme="@style/Theme.AppCompat.PopUp"
             >
         </activity>
+        <activity android:name=".Receita_Bacalhau_Natas">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".receipt_selection" />
+        </activity>
+        <activity android:name=".Receita_Salada_Fruta">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".receipt_selection" />
+        </activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
